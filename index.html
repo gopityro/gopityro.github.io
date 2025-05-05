@@ -6,35 +6,71 @@
   <title>Naga Gopi Mallolu - Profile</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
       margin: 0;
       padding: 0;
     }
     .container {
       max-width: 800px;
-      margin: 2rem auto;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 3rem auto;
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .profile-header {
       text-align: center;
     }
-    img {
-      width: 150px;
+    .profile-header img {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    h1 {
+      margin: 1rem 0 0.25rem;
+      font-size: 2rem;
+      color: #333;
+    }
+    .role {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #444;
+      margin-top: 2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-top: 1rem;
+      text-align: justify;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <img src="./profile-pic.png" alt="Naga Gopi Mallolu">
-    <h1>Naga Gopi Mallolu</h1>
-    <p>Software Engineer | C++ Expert | Master's in Computer Science (May 2025)</p>
+    <div class="profile-header">
+      <img src="./profile-pic.png" alt="Naga Gopi Mallolu">
+      <h1>Naga Gopi Mallolu</h1>
+      <div class="role">Software Engineer | C++ Expert | Master's in Computer Science (May 2025)</div>
+    </div>
 
     <h2>About Me</h2>
-    <p>I have been crafting software solutions with precision and creativity, focusing on performance, scalability, and maintainability. My journey blends industry experience with academic rigor, and I continuously explore innovative ways to solve real-world problems</p>
+    <p class="about-text">
+      I have been crafting software solutions with precision and creativity, focusing on performance, scalability, and maintainability.
+      My journey blends industry experience with academic rigor, and I continuously explore innovative ways to solve real-world problems.
+    </p>
   </div>
 
 </body>
