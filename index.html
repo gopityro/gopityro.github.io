@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Naga Gopi Mallolu - Profile</title>
   <style>
     body {
@@ -56,8 +57,22 @@
       text-align: justify;
     }
     .skills ul {
-  list-style-type: none;
-  padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .skills li {
+      background-color: #f9f9f9;
+      padding: 0.75rem 1rem;
+      border-left: 5px solid #007acc;
+      border-radius: 6px;
+      color: #333;
+      font-size: 1rem;
+      margin: 0;
+    }
 }
 
 .skills li {
@@ -127,13 +142,42 @@
 .experience ul li {
   margin-bottom: 0.5rem;
 }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.skill-card i {
+  font-size: 1.4rem;
+  margin-right: 0.75rem;
+  color: #007acc;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
   </style>
 </head>
 <body>
 
   <div class="container">
     <div class="profile-header">
-      <img src="./profile-pic.png" alt="Naga Gopi Mallolu">
+      <img src="./assets/img/profile-pic.png" alt="Naga Gopi Mallolu">
       <h1>Naga Gopi Mallolu</h1>
       <div class="role">Software Engineer | C++ Expert | Master's in Computer Science (May 2025)</div>
     </div>
@@ -156,17 +200,15 @@
     </div>
 
     <h2>Skills</h2>
-    <div class="skills">
-      <ul>
-        <li><strong>Programming Languages:</strong> C/C++, Python, Java, JavaScript</li>
-        <li><strong>Web Technologies:</strong> HTML5, CSS, Angular, ReactJS, NodeJS</li>
-        <li><strong>Database Management:</strong> Oracle, MongoDB, MSSQL, MySQL</li>
-        <li><strong>Mobile:</strong> Android & iOS App Development</li>
-        <li><strong>Scripting:</strong> Shell Scripting, Batch</li>
-        <li><strong>Operating Systems:</strong> Windows, Linux</li>
-        <li><strong>CI/CD & Tools:</strong> Git, Perforce, JIRA</li>
-        <li><strong>UI Framework:</strong> Qt QML</li>
-      </ul>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fas fa-code"></i><span> C/C++, Python, Java, JavaScript</span></div>
+      <div class="skill-card"><i class="fas fa-globe"></i><span> HTML5, CSS, Angular, ReactJS, NodeJS</span></div>
+      <div class="skill-card"><i class="fas fa-database"></i><span> Oracle, MongoDB, MSSQL, MySQL</span></div>
+      <div class="skill-card"><i class="fas fa-mobile-alt"></i><span> Android & iOS App Development</span></div>
+      <div class="skill-card"><i class="fas fa-terminal"></i><span> Shell Scripting, Batch</span></div>
+      <div class="skill-card"><i class="fas fa-desktop"></i><span> Windows, Linux</span></div>
+      <div class="skill-card"><i class="fas fa-tools"></i><span> Git, Perforce, JIRA</span></div>
+      <div class="skill-card"><i class="fas fa-layer-group"></i><span> Qt QML</span></div>
     </div>
 
     <h2>Connect with Me</h2>
