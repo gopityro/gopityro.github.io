@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naga Gopi Mallolu - Software Development Engineer Portfolio</title>
+  <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&family=Permanent+Marker&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+:root {
+    --primary-dark: #2c3e50;
+    --primary-accent: #3498db;
+    --text-dark: #333333;
+    --text-medium: #666666;
+    --bg-light: #fcfcfc;
+    --bg-white: #ffffff;
+    --border-color: #e9ecef;
+    --shadow-light: 0 2px 12px rgba(0, 0, 0, 0.04);
+    --shadow-medium: 0 4px 15px rgba(0, 0, 0, 0.07);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Patrick Hand', cursive, sans-serif;
+    background-color: #fefaf0;
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.55;
+    scroll-behavior: smooth;
+  
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.02) 1px, transparent 0),
+      linear-gradient(to bottom, transparent 99%, rgba(0, 0, 0, 0.01) 99%),
+      linear-gradient(to right, transparent 99%, rgba(0, 0, 0, 0.01) 99%);
+    background-size: 25px 25px, 25px 25px, 25px 25px;
+    background-attachment: fixed;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  body::-webkit-scrollbar-track {
+    background: #fefaf0;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #c5c5b5;
+    border-radius: 4px;
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background: #9e9e8c;
+  }
+  
+  header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1), -1px -1px 0px rgba(0, 0, 0, 0.05);
+    border-bottom: none;
+  }
+  
+  nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  nav .logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: rotate(-1deg);
+  }
+  
+  nav .logo:hover {
+    color: var(--primary-accent);
+    transform: rotate(1deg) scale(1.02);
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 1.8rem;
+  }
+  
+  nav ul li a {
+    color: var(--text-medium);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px dashed transparent;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-accent);
+    transform: translateY(-2px) rotate(0.5deg);
+  }
+  
+  .main-content {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 1.8rem;
+  }
+  
+  section {
+    padding: 2.5rem 0;
+    border-bottom: 2px dashed var(--border-color);
+  }
+  
+  section:last-child {
+    border-bottom: none;
+  }
+  
+  h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2rem;
+    text-align: center;
+    position: relative;
+    color: var(--primary-dark);
+    transform: rotate(1deg);
+  }
+  
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-accent);
+    margin: 12px auto 0;
+    border-radius: 2px;
+    transform: rotate(-2deg);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  #hero {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.15), -4px -4px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+  }
+  
+  #hero .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2), -3px -3px 0px rgba(0,0,0,0.1);
+    border: 3px solid var(--primary-accent);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transform: rotate(-2deg);
+  }
+  
+  #hero .profile-pic:hover {
+    transform: scale(1.02) rotate(2deg);
+    box-shadow: 7px 7px 0px rgba(0,0,0,0.25), -5px -5px 0px rgba(0,0,0,0.15);
+  }
+  
+  #hero h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 1rem 0 1rem;
+    color: var(--primary-dark);
+    line-height: 1.1;
+    transform: rotate(0.5deg);
+  }
+  
+  #hero .tagline {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    transform: rotate(-0.5deg);
+  }
+  
+  #hero .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  #hero .cta-buttons .btn {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 4px 4px 0px var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+    transform: rotate(1deg);
+  }
+  
+  #hero .cta-buttons .btn:hover {
+    background-color: #2980b9;
+    transform: translate(2px, 2px) rotate(-1deg);
+    box-shadow: 6px 6px 0px var(--primary-dark);
+  }
+  
+  #hero .cta-buttons .btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-accent);
+    color: var(--primary-accent);
+    box-shadow: 4px 4px 0px var(--primary-accent);
+    transform: rotate(-1deg);
+  }
+  
+  #hero .cta-buttons .btn.secondary:hover {
+    background-color: var(--primary-accent);
+    color: white;
+    transform: translate(2px, 2px) rotate(1deg);
+    box-shadow: 6px 6px 0px var(--primary-accent);
+  }
+  
+  #about {
+    text-align: center;
+  }
+  
+  #about p {
+    font-size: 1rem;
+    color: var(--text-medium);
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    transform: rotate(-0.3deg);
+  }
+  
+  #impact {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3rem 2rem;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1), -4px -4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+  }
+  
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .impact-card {
+    background: #fefef0;
+    padding: 1.5rem;
+    border-radius: 2px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.12), -2px -2px 0px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0.5deg);
+  }
+  
+  .impact-card:hover {
+    transform: translateY(-2px) rotate(-0.5deg);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.18), -3px -3px 0px rgba(0, 0, 0, 0.09);
+  }
+  
+  .impact-card .icon {
+    font-size: 2.5rem;
+    color: var(--primary-accent);
+    margin-bottom: 0.8rem;
+  }
+  
+  .impact-card .number {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.4rem;
+  }
+  
+  .impact-card .description {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.4;
+  }
+  
+  #experience .experience-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15), -3px -3px 0px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(-0.8deg);
+  }
+  #experience .experience-item:hover {
+      transform: translateY(-3px) rotate(0.8deg);
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2), -4px -4px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  #experience .experience-item h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    color: var(--primary-dark);
+    transform: rotate(0.2deg);
+  }
+  
+  #experience .experience-item .role-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px dashed var(--border-color);
+    transform: rotate(-0.3deg);
+  }
+  
+  #experience .experience-item .role-info span {
+      font-weight: 500;
+  }
+  
+  #experience .experience-item ul {
+    padding-left: 1.5rem;
+    list-style: none;
+  }
+  
+  #experience .experience-item ul li {
+    position: relative;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+    transform: rotate(0.1deg);
+  }
+  
+  #experience .experience-item ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--primary-accent);
+    position: absolute;
+    left: -1.5rem;
+    top: 0.2rem;
+    transform: rotate(-5deg);
+  }
+  
+  #skills .skills-category {
+    margin-bottom: 2rem;
+  }
+  
+  #skills .skills-category:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  #skills .skills-category h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+    text-align: center;
+    position: relative;
+    transform: rotate(-0.5deg);
+  }
+  
+  #skills .skills-category h3::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--primary-accent);
+      margin: 8px auto 0;
+      border-radius: 1px;
+      transform: rotate(2deg);
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+  
+  .skill-tag {
+    background-color: #edf5fa;
+    color: var(--primary-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(52, 152, 219, 0.4);
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transform: rotate(0.2deg);
+  }
+  
+  .skill-tag:hover {
+    background-color: var(--primary-accent);
+    color: white;
+    transform: translateY(-2px) rotate(-1deg);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.15), -3px -3px 0px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(0.5deg);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px) rotate(-0.5deg);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2), -4px -4px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card:hover img {
+      transform: scale(1.03) rotate(0.8deg);
+  }
+  
+  .project-card-content {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: var(--primary-dark);
+    transform: rotate(-0.2deg);
+  }
+  
+  .project-card p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 0.8rem;
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+  
+  .project-card .technologies {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 0.8rem;
+      font-style: italic;
+      transform: rotate(0.1deg);
+  }
+  
+  .project-links {
+      margin-top: auto;
+      display: flex;
+      gap: 0.8rem;
+      transform: rotate(-0.3deg);
+  }
+  
+  .project-links a {
+    display: inline-block;
+    margin-right: 0;
+    color: var(--primary-accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border-bottom: 1px dashed var(--primary-accent);
+    padding-bottom: 2px;
+  }
+  
+  .project-links a i {
+      margin-right: 0.3rem;
+  }
+  
+  .project-links a:hover {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+    transform: translateY(-1px) rotate(0.5deg);
+  }
+  
+  #contact {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 3rem 2rem;
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1), -4px -4px 0px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+  }
+  #contact .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  #contact .social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px dashed transparent;
+    padding-bottom: 3px;
+    transform: rotate(0.5deg);
+  }
+  
+  #contact .social-links a:hover {
+    color: var(--primary-accent);
+    transform: translateY(-3px) rotate(-1deg);
+    border-bottom-color: var(--primary-accent);
+  }
+  
+  #contact .social-links a img {
+    width: 22px;
+    height: 22px;
+    margin-right: 0.6rem;
+    filter: grayscale(60%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    transform: rotate(2deg);
+  }
+  
+  #contact .social-links a:hover img {
+    filter: none;
+    transform: scale(1.05) rotate(-2deg);
+  }
+  
+  #contact .social-links a .fas {
+      font-size: 22px;
+      margin-right: 0.6rem;
+      transform: rotate(2deg);
+  }
+  #contact .social-links a.email-link .fas {
+      color: #c0392b;
+      transition: color 0.3s ease, transform 0.3s ease;
+  }
+  #contact .social-links a.email-link:hover .fas {
+      color: var(--primary-accent);
+      transform: scale(1.05) rotate(-2deg);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    background-color: var(--primary-dark);
+    color: white;
+    font-size: 0.85rem;
+    border-top: 4px solid var(--primary-accent);
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (max-width: 992px) {
+    nav {
+      padding: 0 1.5rem;
+    }
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+    .main-content {
+      padding: 1.5rem 1.5rem;
+    }
+    #hero h1 {
+      font-size: 3rem;
+    }
+    #hero .tagline {
+      font-size: 1.1rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav .logo {
+      margin-bottom: 0.8rem;
+      transform: none;
+    }
+    nav .logo:hover {
+      transform: none;
+    }
+    nav ul {
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0.4rem 0.6rem;
+    }
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+    section {
+      padding: 2rem 0;
+    }
+    #hero {
+      padding: 2.5rem 1.5rem;
+    }
+    #hero h1 {
+      font-size: 2.5rem;
+    }
+    #hero .tagline {
+      font-size: 1rem;
+    }
+    #hero .cta-buttons {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    #hero .cta-buttons .btn {
+      width: 90%;
+      margin: auto;
+      transform: none;
+    }
+    #hero .cta-buttons .btn:hover {
+      transform: translateY(2px);
+    }
+    #hero .cta-buttons .btn.secondary {
+      transform: none;
+    }
+    #hero .cta-buttons .btn.secondary:hover {
+      transform: translateY(2px);
+    }
+    .impact-card .icon {
+      font-size: 2.2rem;
+    }
+    .impact-card .number {
+      font-size: 1.8rem;
+    }
+    .impact-card {
+      transform: none;
+    }
+    .impact-card:hover {
+      transform: translateY(-2px);
+    }
+    #experience .experience-item {
+      padding: 1.5rem;
+      transform: none;
+    }
+    #experience .experience-item:hover {
+      transform: translateY(-2px);
+    }
+    #experience .experience-item h3 {
+      font-size: 1.3rem;
+      transform: none;
+    }
+    #experience .experience-item ul li {
+      font-size: 0.9rem;
+      transform: none;
+    }
+    #skills .skills-category h3 {
+      font-size: 1.2rem;
+      transform: none;
+    }
+    .skill-tag {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      transform: none;
+    }
+    .skill-tag:hover {
+      transform: translateY(-1px);
+    }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    .project-card img {
+      height: 150px;
+    }
+    .project-card {
+      transform: none;
+    }
+    .project-card:hover {
+      transform: translateY(-2px);
+    }
+    .project-card:hover img {
+      transform: scale(1.015);
+    }
+    .project-links a {
+      font-size: 0.8rem;
+      transform: none;
+    }
+    .project-links a:hover {
+      transform: translateY(-1px);
+    }
+    #contact .social-links {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    #contact .social-links a {
+      font-size: 0.95rem;
+      transform: none;
+    }
+    #contact .social-links a:hover {
+      transform: translateY(-2px);
+    }
+    #contact .social-links a img, #contact .social-links a .fas {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      transform: none;
+    }
+    #contact .social-links a:hover img, #contact .social-links a.email-link:hover .fas {
+      transform: scale(1.02);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #hero h1 {
+      font-size: 2.2rem;
+    }
+    #hero .tagline {
+      font-size: 0.9rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    .impact-grid {
+      grid-template-columns: 1fr;
+    }
+    .impact-card .description {
+        font-size: 0.9rem;
+    }
+    .project-card-content {
+        padding: 0.8rem;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="logo"><img width="80" src="./assets/img/logo.png" alt=""></a>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section id="hero">
+      <img class="profile-pic" src="./assets/img/profile-pic.png" alt="Naga Gopi Mallolu">
+      <h1>Naga Gopi Mallolu</h1>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn">View My Projects</a>
+        <a href="#contact" class="btn secondary">Connect With Me</a>
+        
+      </div>
+      <i>
+        <p>
+          I have been crafting software solutions with precision and creativity, focusing on performance, scalability, and maintainability. { "In ❤️ with building software products" }
+          </p>
+        </i>
+    </section>
+
+    <section id="impact">
+      <h2>My Impact & Key Achievements</h2>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <i class="fas fa-bug icon"></i>
+          <div class="number">267+</div>
+          <div class="description">Bugs Fixed in Siemens NX</div>
+        </div>
+        <div class="impact-card">
+          <i class="fas fa-code icon"></i>
+          <div class="number">10,314+</div>
+          <div class="description">Lines of Code Added</div>
+        </div>
+        <div class="impact-card">
+          <i class="fas fa-lightbulb icon"></i>
+          <div class="number">35+</div>
+          <div class="description">Bugs Reported</div>
+        </div>
+        <div class="impact-card">
+          <i class="fas fa-project-diagram icon"></i>
+          <div class="number">Led</div>
+          <div class="description">Successful CAD Projects from Design to Deployment</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="experience-item">
+        <h3>Software Engineer – Siemens Digital Industries</h3>
+        <div class="role-info">
+            <span>Pune, India</span>
+            <span>Mar 2017 – Jul 2023</span>
+        </div>
+        <ul>
+          <li>Engineered key modules in Siemens NX using C++, contributing to robust CAD functionalities.</li>
+          <li>Resolved 267+ bugs and performance issues, improving reliability for 5000+ enterprise users.</li>
+          <li>Contributed over 10,000 lines of code, maintaining clean architecture in a large-scale codebase.</li>
+          <li>Led integration between NX and Teamcenter, optimizing cross-platform workflows.</li>
+        </ul>
+      </div>
+      </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-category">
+        <h3>Core Programming & Software Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">Agile SDLC</span>
+          <span class="skill-tag">Requirement Analysis</span>
+          <span class="skill-tag">Design Patterns</span>
+          <span class="skill-tag">Code Optimization</span>
+          <span class="skill-tag">Debugging</span>
+          <span class="skill-tag">Automation</span>
+          <span class="skill-tag">Performance Tuning</span>
+          <span class="skill-tag">Bug Tracking</span>
+          <span class="skill-tag">CI/CD Practices</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Web, Data & Specialized Frameworks</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">REST</span>
+          <span class="skill-tag">JSON</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">CodeIgniter</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">ROS2</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Tools & Platforms</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Perforce</span>
+          <span class="skill-tag">Android</span>
+          <span class="skill-tag">iOS</span>
+          <span class="skill-tag">Jupyter Notebook</span>
+          <span class="skill-tag">PyCharm</span>
+          <span class="skill-tag">Visual Studio Code</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Oracle</span>
+          <span class="skill-tag">MS SQL Server</span>
+          <span class="skill-tag">MongoDB</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="./assets/img/designpatterns.png" alt="Design Patterns Project">
+          <div class="project-card-content">
+            <h3>Design Patterns in C++</h3>
+            <p>A comprehensive repository showcasing various design patterns implemented in modern C++ to demonstrate software architecture principles and best practices.</p>
+            <div class="technologies">Technologies: C++, OOP, Design Patterns</div>
+            <div class="project-links">
+              <a href="https://github.com/gopityro/Design-Patterns-CPP" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="./assets/img/webnotepad.png" alt="Web NotePad Project">
+          <div class="project-card-content">
+            <h3>Web NotePad Chrome Extension</h3>
+            <p>A lightweight and efficient Chrome extension for taking notes directly within the browser, leveraging front-end development and browser API usage.</p>
+            <div class="technologies">Technologies: JavaScript, HTML, CSS, Chrome APIs</div>
+            <div class="project-links">
+              <a href="https://github.com/gopityro/WebNotePad" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="./assets/img/netflixdata.png" alt="Netflix Data Analysis Project">
+          <div class="project-card-content">
+            <h3>Netflix Data Analysis</h3>
+            <p>An exploratory data analysis project using Python and Jupyter Notebooks to uncover trends, audience insights, and content patterns from Netflix's extensive dataset.</p>
+            <div class="technologies">Technologies: Python, Pandas, NumPy, Jupyter, Data Visualization</div>
+            <div class="project-links">
+              <a href="https://github.com/gopityro/Netflix-Data-Analysis" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Connect!</h2>
+      <p style="text-align: center; font-size: 0.9rem; color: var(--text-medium); max-width: 500px; margin: -1.2rem auto 1rem auto;">
+        Whether you have a project in mind, a question, or just want to say hello, feel free to reach out!
+      </p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/nagagopi/" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">LinkedIn
+        </a>
+        <a href="https://github.com/gopityro" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">GitHub
+        </a>
+        <a href="mailto:gopityro@gmail.com" class="email-link">
+            <i class="fas fa-envelope"></i>Email
+        </a>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Naga Gopi Mallolu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll and active link highlighting (Scrollspy)
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    const sections = document.querySelectorAll('section');
+    const navLi = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - sectionHeight * 0.3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLi.forEach(li => {
+            li.classList.remove('active');
+            if (li.getAttribute('href').includes(current)) {
+                li.classList.add('active');
+            }
+        });
+    });
+  </script>
+
+</body>
+</html>
