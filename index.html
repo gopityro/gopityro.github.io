@@ -7,6 +7,7 @@
   <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <style>
     /* General Styles */
     :root {
@@ -102,11 +103,11 @@
       color: var(--text-medium);
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.85rem; /* Reduced font size */
+      font-size: 0.85rem;
       transition: color 0.3s ease, border-color 0.3s ease;
       position: relative;
-      padding-bottom: 0.3rem; /* Reduced padding */
-      border-bottom: 2px solid transparent; /* Thinner underline */
+      padding-bottom: 0.3rem; 
+      border-bottom: 2px solid transparent; 
     }
 
     nav ul li a:hover,
@@ -117,7 +118,7 @@
 
     /* Main Content Wrapper */
     .main-content {
-      max-width: 900px; /* Slightly narrower for a tighter feel */
+      max-width: 900px; 
       margin: auto;
       padding: 0 1.8rem; 
     }
@@ -672,32 +673,58 @@
           font-size: 0.8rem;
       }
     }
-    
+   .tech-icons i {
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-icons i::before {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-icons i:hover::before {
+      transform: scale(1.5);
+    }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <a href="#" class="logo"><img width="80" src="./assets/img/logo.png" alt=""></a>
       <ul>
-        <li><a href="#hero"><i class="fas fa-house" style="color: #ff6347;"></i> Home</a></li>          <!-- Tomato -->
-        <li><a href="#impact"><i class="fas fa-chart-line" style="color: #1e90ff;"></i> Impact</a></li> <!-- DodgerBlue -->
-        <li><a href="#experience"><i class="fas fa-briefcase" style="color: #32cd32;"></i> Experience</a></li> <!-- LimeGreen -->
-        <li><a href="#skills"><i class="fas fa-tools" style="color: #ff8c00;"></i> Skills</a></li>      <!-- DarkOrange -->
-        <li><a href="#projects"><i class="fas fa-code" style="color: #6a5acd;"></i> Projects</a></li>   <!-- SlateBlue -->
-        <li><a href="#contact"><i class="fas fa-envelope" style="color: #dc143c;"></i> Connect</a></li> <!-- Crimson -->
+        <li><a href="#hero"><i class="fas fa-house"></i> Home</a></li>          
+        <li><a href="#impact"><i class="fas fa-chart-line"></i> Impact</a></li> 
+        <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li> 
+        <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>     
+        <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>  
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Connect</a></li> 
       </ul>
     </nav>
   </header>
-  
-  
   
 
   <main class="main-content">
     <section id="hero">
       <img class="profile-pic" src="./assets/img/profile-pic.png" alt="Naga Gopi Mallolu">
       <h1>Naga Gopi Mallolu</h1>
+      <div class="tech-icons">
+        <i class="devicon-cplusplus-plain colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-java-plain colored"></i>
+        <i class="devicon-html5-plain colored"></i>
+        <i class="devicon-css3-plain colored"></i>
+        <i class="devicon-csharp-plain colored"></i>
+        <i class="devicon-react-original colored"></i>
+        <i class="devicon-nodejs-plain colored"></i>
+        <i class="devicon-python-plain colored"></i>
+        
+        <i class="devicon-php-plain colored"></i>
+        <i class="devicon-git-plain colored"></i>
+        <i class="devicon-docker-plain colored"></i>
+        <i class="fas fa-drafting-compass"></i> 
+      </div>
       <div class="cta-buttons">
         <a href="#projects" class="btn">Projects</a>
         <a href="#contact" class="btn secondary">Connect</a>
