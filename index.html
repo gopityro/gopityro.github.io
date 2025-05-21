@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     /* General Styles */
     :root {
@@ -151,6 +152,7 @@
 
     /* Hero Section */
     #hero {
+      position: relative;
       background-color: var(--bg-white);
       text-align: center;
       padding: 2rem 2rem; 
@@ -687,6 +689,52 @@
     .tech-icons i:hover::before {
       transform: scale(1.5);
     }
+
+    .visitor-stats {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      display: flex;
+      gap: 20px;
+      background: #ffffffcc;
+      border: 1px solid #e0e0e0;
+      padding: 8px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.85rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .visitor-stats {
+  background-color: #f0f8ff; /* light blue tint */
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+
+.visitor-stats .stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: #0078d4; /* professional soft blue */
+}
+
+.visitor-stats i {
+  color: #5aa9e6;
+  font-size: 1rem;
+}
+
+.visitor-stats .label {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
   </style>
 </head>
 <body>
@@ -707,6 +755,13 @@
 
   <main class="main-content">
     <section id="hero">
+      <div class="visitor-stats">
+        <div class="stat">
+          <i class="fas fa-users"></i>
+          <span id="pageViews">0</span>
+          <span class="label">views</span>
+        </div>
+      </div>
       <img class="profile-pic" src="./assets/img/profile-pic.png" alt="Naga Gopi Mallolu">
       <h1>Naga Gopi Mallolu</h1>
       <div class="tech-icons">
@@ -938,6 +993,6 @@
         });
     });
   </script>
-
+  <script src="./assets/js/livecounter.js"></script>
 </body>
 </html>
